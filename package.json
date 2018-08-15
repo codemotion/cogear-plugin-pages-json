@@ -6,6 +6,7 @@
 	"repository": "https://github.com/codemotion/cogear-plugin-pages-json",
 	"homepage": "https://github.com/codemotion/cogear-plugin-pages-json",
 	"license": "MIT",
+	"keywords": ["Cogear.JS","plugin","pages.json"],
 	"main": "./plugin.js",
 	"devDependencies": {
 		"fs": "^0.0.1-security",
