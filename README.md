@@ -1,4 +1,4 @@
-# Cogear.JS plugin **Pages.JSON**
+# Cogear.JS plugin `Pages.JSON`
 
 Simply generates `pages.json` file in the `source` folder with all parsed pages data structure.
 
