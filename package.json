@@ -1,0 +1,15 @@
+{
+	"name": "cogear-plugin-pages-json",
+	"description": "Generates pages.json file after build",
+	"version": "1.0.0",
+	"author": "Dmitriy Beliaev",
+	"repository": "https://github.com/codemotion/cogear-plugin-pages-json",
+	"homepage": "https://github.com/codemotion/cogear-plugin-pages-json",
+	"license": "MIT",
+	"main": "./plugin.js",
+	"devDependencies": {
+		"fs": "^0.0.1-security",
+		"json-stringify-pretty-compact": "^1.2.0",
+		"path": "^0.12.7"
+	}
+}
