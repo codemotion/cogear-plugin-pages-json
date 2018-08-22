@@ -16,6 +16,7 @@ module.exports = {
 				})
 				let pagesJSON = path.join(cogear.options.output, "pages.json")
 				fs.writeFileSync(pagesJSON,stringify(pages));
+				cogear.emit('pages.json',pagesJSON)
 			})
 			cogear.on('clear',()=>{
 				let pagesJSON = path.join(cogear.options.output, "pages.json")
