@@ -4,16 +4,25 @@ fs = require("fs");
 
 module.exports = {
 		apply(){
-			let pagesJSON = path.join(cogear.options.src, "pages.json")
 			// Process hooks here
 			cogear.on('build.done',()=>{
 				// Write pages to JSON
-				fs.writeFileSync(pagesJSON,stringify(cogear.pages));
+				let pages = {}
+				Object.entries(cogear.pages).map(([file,page])=>{
+					pages[page.path.replace('index.html','').replace(/^/,'/')] = {
+						title: page.title,
+						content: page.content,
+					}
+				})
+				let pagesJSON = path.join(cogear.options.output, "pages.json")
+				fs.writeFileSync(pagesJSON,stringify(pages));
 			})
 			cogear.on('clear',()=>{
+				let pagesJSON = path.join(cogear.options.output, "pages.json")
 				del.sync(pagesJSON)
 			})
 			cogear.on('death',()=>{
+				let pagesJSON = path.join(cogear.options.output, "pages.json")
 				del.sync(pagesJSON)
 			})
 		}
