@@ -1,6 +1,7 @@
-const path = require("path"),
-stringify = require("json-stringify-pretty-compact"),
-fs = require("fs");
+const path = require("path");
+const stringify = require("json-stringify-pretty-compact");
+const fs = require("fs");
+const del = require("del");
 
 module.exports = {
 		apply(){

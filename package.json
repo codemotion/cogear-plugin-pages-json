@@ -16,5 +16,8 @@
 		"fs": "^0.0.1-security",
 		"json-stringify-pretty-compact": "^1.2.0",
 		"path": "^0.12.7"
+	},
+	"dependencies": {
+		"del": "^3.0.0"
 	}
 }
